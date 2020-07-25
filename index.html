@@ -1,133 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-      <link rel="stylesheet" href="estilos.css">
-  
-  
-  <title>Frontend Mentor | Social Media Dashboard</title>
-<script src="https://use.fontawesome.com/2dc06f3d8f.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="estilos.css" />
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Social Media Dashboard</title>
+    <script src="https://use.fontawesome.com/2dc06f3d8f.js"></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
 
-  <header> <section>
-    <h1>Social Media Dashboard</h1>
-    <h3>Total Followers: 23,004</h3>
-    </section>
-    
-    <section class="dm"> <div class="toggle" >Dark Mode
-      <label class="switch" for="changer">
-  <input type="checkbox" id="changer">
-  <span class="slider round">
-    <i class="fa fa-sun-o" id="theme-sun" aria-hidden="true"></i>
-    
-<i class="fa fa-moon-o" id="theme-moon" aria-hidden="true"></i>
-</span>
-</label></div>
-      
-    </section>
-  </header>
-  
-  <main>
-  
-  <section class="main-dash">
+  <body>
+    <header>
+      <section>
+        <h1>Social Media Dashboard</h1>
+        <h3>Total Followers: 23,004</h3>
+      </section>
 
-  <div class="big-dash"> 
-    <div class="fbk"></div>
+      <section class="dm">
+        <div class="toggle">
+          <label for="toggler">Dark Mode</label>
 
-<div class="container">
-<p class="user" id="fbk">@nathanf</p>
-    <h1 class="followers">1987</h1>
-  <p class="num-foll">Followers</p>
-  <p class="today-Follows">12 Today</p> 
-  </div>
-  </div>
-  
-  <div class="big-dash"> 
-      <div class="twr"></div>
+          <div class="toggler" onClick="darkMode()">
+            <span class="slider"></span>
+          </div>
+        </div>
+      </section>
+    </header>
 
-<div class="container">
-<p class="user" id="twr">@nathanf</p>
-    <h1 class="followers">1044</h1>
-  <p class="num-foll">Followers</p>
-  <p class="today-Follows">99 Today</p> 
-  </div>
-  </div>
-  
-  <div class="big-dash"> 
-      <div class="ig"></div>
+    <main>
+      <section class="main-dash">
+        <div class="big-dash">
+          <div class="fbk"></div>
 
-<div class="container">
-<p class="user" id="ig">@realnathanf</p>
-    <h1 class="followers">11k</h1>
-  <p class="num-foll">Followers</p>
-  <p class="today-Follows">1099 Today</p> 
-  </div>
-  </div>
-  
-  <div class="big-dash"> 
-      <div class="yt"></div>
+          <div class="container">
+            <img src="images/icon-facebook.svg" alt="" />
+            <p class="user" id="fbk">
+              @nathanf
+            </p>
+            <h1 class="num-foll">1987</h1>
+            <p class="followers">Followers</p>
+            <p class="today-Follows up">12 Today</p>
+          </div>
+        </div>
 
-<div class="container">
-<p class="user" id="yt">Nathan F.</p>
-    <h1 class="followers">8239</h1>
-  <p class="num-foll">Subscribers</p>
-  <p class="today-Follows">144 Today</p> 
-  </div>
-  </div>
-  </section>
-  </main>
+        <div class="big-dash">
+          <div class="twr"></div>
 
- 
-  Overview - Today
+          <div class="container">
+            <img src="images/icon-twitter.svg" alt="" />
+            <p class="user" id="twr">
+              @nathanf
+            </p>
+            <h1 class="num-foll">1044</h1>
+            <p class="followers">Followers</p>
+            <p class="today-Follows up">99 Today</p>
+          </div>
+        </div>
 
-  Page Views
-  87
-  3%
+        <div class="big-dash">
+          <div class="ig"></div>
 
-  Likes
-  52
-  2%
+          <div class="container">
+            <img src="images/icon-instagram.svg" alt="" />
+            <p class="user" id="ig">
+              @realnathanf
+            </p>
+            <h1 class="num-foll">11k</h1>
+            <p class="followers">Followers</p>
+            <p class="today-Follows up">1099 Today</p>
+          </div>
+        </div>
 
-  Likes
-  5462
-  2257%
+        <div class="big-dash">
+          <div class="yt"></div>
 
-  Profile Views
-  52k
-  1375%
+          <div class="container">
+            <img src="images/icon-youtube.svg" alt="" />
+            <p class="user" id="yt">
+              Nathan F.
+            </p>
+            <h1 class="num-foll">8239</h1>
+            <p class="followers">Subscribers</p>
+            <p class="today-Follows down">144 Today</p>
+          </div>
+        </div>
+      </section>
+      <section class="second-dash">
+        <h2>Overview - Today</h2>
+        <div class="contenedor-dash">
+          <div class="small-dash">
+            <div class="first">
+              <ul>
+                <li>Page Views</li>
+                <li>87</li>
+              </ul>
+              <ul>
+                <li><img src="images/icon-facebook.svg" alt="" /></li>
+                <li>3%</li>
+              </ul>
+            </div>
+          </div>
 
-  Retweets
-  117
-  303%
+          <div class="small-dash">
+            <div class="first">
+              <ul>
+                <li>Likes</li>
+                <li>52</li>
+              </ul>
+              <ul>
+                <li><img src="images/icon-facebook.svg" alt="" /></li>
+                <li>2%</li>
+              </ul>
+            </div>
+          </div>
 
-  Likes
-  507
-  553%
+          <div class="small-dash">
+            <div class="first">
+              <ul>
+                <li>Likes</li>
+                <li>5462</li>
+              </ul>
+              <ul>
+                <li><img src="images/icon-instagram.svg" alt="" /></li>
+                <li>227%</li>
+              </ul>
+            </div>
+          </div>
 
-  Likes
-  107
-  19%
+          <div class="small-dash">
+            <div class="first">
+              <ul>
+                <li>Profile Views</li>
+                <li>52k</li>
+              </ul>
+              <ul>
+                <li><img src="images/icon-instagram.svg" alt="" /></li>
+                <li>135%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/tinchomartin">Martin</a>.
-  </div>
-  
-  <script type="text/javascript" src="darkMode.js"></script>
+        <div class="contenedor-dash">
+          <div class="small-dash">
+            <div class="first">
+              <ul>
+                <li>Retweets</li>
+                <li>117</li>
+              </ul>
+              <ul>
+                <li><img src="images/icon-twitter.svg" alt="" /></li>
+                <li>303%</li>
+              </ul>
+            </div>
+          </div>
 
-</body>
+          <div class="small-dash">
+            <div class="first">
+              <ul>
+                <li>Likes</li>
+                <li>507</li>
+              </ul>
+              <ul>
+                <li><img src="images/icon-twitter.svg" alt="" /></li>
+                <li>553%</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="small-dash">
+            <div class="first">
+              <ul>
+                <li>Likes</li>
+                <li>107</li>
+              </ul>
+              <ul>
+                <li><img src="images/icon-youtube.svg" alt="" /></li>
+                <li>19%</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="small-dash">
+            <div class="first">
+              <ul>
+                <li>Total Views</li>
+                <li>1407</li>
+              </ul>
+              <ul>
+                <li><img src="images/icon-youtube.svg" alt="" /></li>
+                <li>12%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="attribution">
+      <footer>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/tinchomartin">Martin</a>.
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="darkMode.js"></script>
+  </body>
 </html>
