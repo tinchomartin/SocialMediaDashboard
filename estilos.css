@@ -135,7 +135,7 @@ i {
   }
 
   .dark-theme .big-dash:hover,
-  .small-dash:hover {
+  .dark-theme .small-dash:hover {
     background-color: #252a41;
   }
 
